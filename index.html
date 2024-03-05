@@ -1,313 +1,514 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zenith-W Forum</title>
-  <!-- Icons from font-awesome -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenith-W Forum</title>
+    <!-- Icons from font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- DaisyUI and Tailwind  -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Google Fonts Inter and Mulish -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-  
-  <style>
-     .font-mul{
-      font-family: "Mulish", sans-serif;
-     }
-     .font-int{
-      font-family: "Inter", sans-serif;
-     }
-  </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter and Mulish -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body >
- 
-   <header class="container mx-auto mt-3   xl:w-[80%] lg:mt-10 lg:mb-24 lg:space-y-6">
+    <style>
+      .font-mul {
+        font-family: "Mulish", sans-serif;
+      }
+      .font-int {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="container mx-auto mt-3 xl:w-[80%] lg:mt-10 lg:mb-24 lg:space-y-6"
+    >
       <nav class="flex w-[95%] lg:w-full mx-auto lg:justify-between mt-6 mb-4">
-        <h2 class="text-4xl lg:text-5xl font-extrabold">Zenith-<span class="text-[#797DFC]">W</span></h2>
+        <h2 class="text-4xl lg:text-5xl font-extrabold">
+          Zenith-<span class="text-[#797DFC]">W</span>
+        </h2>
 
         <!-- Dropdown Menu -->
         <div class="dropdown">
-          <div tabindex="0" role="button"
-            class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg"
-              class="w-10 h-10" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor"><path
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-10 h-10"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
                 stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
           </div>
-          <ul tabindex="0" class="menu menu-sm flex-row justify-between gap-4  dropdown-content mt-3 z-[1]  p-2 shadow bg-base-100 rounded-box w-40">
+          <ul
+            tabindex="0"
+            class="menu menu-sm flex-row justify-between gap-4 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40"
+          >
             <li>
-              <div class="btn tooltip mb-4 flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6] " data-tip="Home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                 </svg>
-             </div>
-            
-              <div class="btn tooltip flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6] " data-tip="Add">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M18 7.5V10.5M18 10.5V13.5M18 10.5H21M18 10.5H15M12.75 6.375C12.75 7.27011 12.3944 8.12855 11.7615 8.76149C11.1285 9.39442 10.2701 9.75 9.375 9.75C8.47989 9.75 7.62145 9.39442 6.98851 8.76149C6.35558 8.12855 6 7.27011 6 6.375C6 5.47989 6.35558 4.62145 6.98851 3.98851C7.62145 3.35558 8.47989 3 9.375 3C10.2701 3 11.1285 3.35558 11.7615 3.98851C12.3944 4.62145 12.75 5.47989 12.75 6.375ZM3 19.235V19.125C3 17.4342 3.67165 15.8127 4.86719 14.6172C6.06274 13.4216 7.68424 12.75 9.375 12.75C11.0658 12.75 12.6873 13.4216 13.8828 14.6172C15.0784 15.8127 15.75 17.4342 15.75 19.125V19.234C13.8255 20.3931 11.6206 21.0038 9.374 21C7.043 21 4.862 20.355 3 19.234V19.235Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <div
+                class="btn tooltip mb-4 flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6]"
+                data-tip="Home"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5"
+                    stroke="#12132D"
+                    stroke-opacity="0.6"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
-             </div>
+              </div>
+
+              <div
+                class="btn tooltip flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6]"
+                data-tip="Add"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 7.5V10.5M18 10.5V13.5M18 10.5H21M18 10.5H15M12.75 6.375C12.75 7.27011 12.3944 8.12855 11.7615 8.76149C11.1285 9.39442 10.2701 9.75 9.375 9.75C8.47989 9.75 7.62145 9.39442 6.98851 8.76149C6.35558 8.12855 6 7.27011 6 6.375C6 5.47989 6.35558 4.62145 6.98851 3.98851C7.62145 3.35558 8.47989 3 9.375 3C10.2701 3 11.1285 3.35558 11.7615 3.98851C12.3944 4.62145 12.75 5.47989 12.75 6.375ZM3 19.235V19.125C3 17.4342 3.67165 15.8127 4.86719 14.6172C6.06274 13.4216 7.68424 12.75 9.375 12.75C11.0658 12.75 12.6873 13.4216 13.8828 14.6172C15.0784 15.8127 15.75 17.4342 15.75 19.125V19.234C13.8255 20.3931 11.6206 21.0038 9.374 21C7.043 21 4.862 20.355 3 19.234V19.235Z"
+                    stroke="#12132D"
+                    stroke-opacity="0.6"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </li>
             <li>
-              <div class="btn tooltip mb-4 flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6] " data-tip="Edit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <div
+                class="btn tooltip mb-4 flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6]"
+                data-tip="Edit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125"
+                    stroke="#12132D"
+                    stroke-opacity="0.6"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
-             </div>
-           
-              <div class="btn tooltip flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6] " data-tip="Flag">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </div>
+
+              <div
+                class="btn tooltip flex items-center justify-center rounded-full w-12 h-10 bg-[#cbd2e6]"
+                data-tip="Flag"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15"
+                    stroke="#12132D"
+                    stroke-opacity="0.6"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
-             </div>
+              </div>
             </li>
-            <button class="btn w-[100%] text-white text-lg font-int font-semibold rounded-3xl bg-[#797DFC]">Sign In</button>
-           </ul>
-         </div>
+            <button
+              class="btn w-[100%] text-white text-lg font-int font-semibold rounded-3xl bg-[#797DFC]"
+            >
+              Sign In
+            </button>
+          </ul>
+        </div>
         <!-- Drop Ends Here -->
 
-        <div class="icon-container hidden lg:flex justify-center items-center gap-4 ">
-          <div class="btn tooltip flex items-center justify-center rounded-full  w-14 h-12  bg-[#cbd2e6] " data-tip="Home">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-             <path d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <div
+          class="icon-container hidden lg:flex justify-center items-center gap-4"
+        >
+          <div
+            class="btn tooltip flex items-center justify-center rounded-full w-14 h-12 bg-[#cbd2e6]"
+            data-tip="Home"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5"
+                stroke="#12132D"
+                stroke-opacity="0.6"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-         </div>
-          <div class="btn tooltip flex items-center justify-center rounded-full w-14 h-12 bg-[#cbd2e6] " data-tip="Edit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </div>
+          <div
+            class="btn tooltip flex items-center justify-center rounded-full w-14 h-12 bg-[#cbd2e6]"
+            data-tip="Edit"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125"
+                stroke="#12132D"
+                stroke-opacity="0.6"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-         </div>
-          <div class="btn tooltip flex items-center justify-center rounded-full  w-14 h-12  bg-[#cbd2e6] " data-tip="Add">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M18 7.5V10.5M18 10.5V13.5M18 10.5H21M18 10.5H15M12.75 6.375C12.75 7.27011 12.3944 8.12855 11.7615 8.76149C11.1285 9.39442 10.2701 9.75 9.375 9.75C8.47989 9.75 7.62145 9.39442 6.98851 8.76149C6.35558 8.12855 6 7.27011 6 6.375C6 5.47989 6.35558 4.62145 6.98851 3.98851C7.62145 3.35558 8.47989 3 9.375 3C10.2701 3 11.1285 3.35558 11.7615 3.98851C12.3944 4.62145 12.75 5.47989 12.75 6.375ZM3 19.235V19.125C3 17.4342 3.67165 15.8127 4.86719 14.6172C6.06274 13.4216 7.68424 12.75 9.375 12.75C11.0658 12.75 12.6873 13.4216 13.8828 14.6172C15.0784 15.8127 15.75 17.4342 15.75 19.125V19.234C13.8255 20.3931 11.6206 21.0038 9.374 21C7.043 21 4.862 20.355 3 19.234V19.235Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </div>
+          <div
+            class="btn tooltip flex items-center justify-center rounded-full w-14 h-12 bg-[#cbd2e6]"
+            data-tip="Add"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M18 7.5V10.5M18 10.5V13.5M18 10.5H21M18 10.5H15M12.75 6.375C12.75 7.27011 12.3944 8.12855 11.7615 8.76149C11.1285 9.39442 10.2701 9.75 9.375 9.75C8.47989 9.75 7.62145 9.39442 6.98851 8.76149C6.35558 8.12855 6 7.27011 6 6.375C6 5.47989 6.35558 4.62145 6.98851 3.98851C7.62145 3.35558 8.47989 3 9.375 3C10.2701 3 11.1285 3.35558 11.7615 3.98851C12.3944 4.62145 12.75 5.47989 12.75 6.375ZM3 19.235V19.125C3 17.4342 3.67165 15.8127 4.86719 14.6172C6.06274 13.4216 7.68424 12.75 9.375 12.75C11.0658 12.75 12.6873 13.4216 13.8828 14.6172C15.0784 15.8127 15.75 17.4342 15.75 19.125V19.234C13.8255 20.3931 11.6206 21.0038 9.374 21C7.043 21 4.862 20.355 3 19.234V19.235Z"
+                stroke="#12132D"
+                stroke-opacity="0.6"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-         </div>
-          <div class="btn tooltip flex items-center justify-center rounded-full  w-14 h-12  bg-[#cbd2e6] " data-tip="Flag">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </div>
+          <div
+            class="btn tooltip flex items-center justify-center rounded-full w-14 h-12 bg-[#cbd2e6]"
+            data-tip="Flag"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15"
+                stroke="#12132D"
+                stroke-opacity="0.6"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-         </div> 
-           <button class="btn lg:w-[30%] w-[25%] text-white text-lg font-int font-semibold rounded-3xl bg-[#797DFC]">Sign In</button>
+          </div>
+          <button
+            class="btn lg:w-[30%] w-[25%] text-white text-lg font-int font-semibold rounded-3xl bg-[#797DFC]"
+          >
+            Sign In
+          </button>
         </div>
       </nav>
-   <!-- Header Section -->
+      <!-- Header Section -->
       <section class="container mx-auto relative">
-            
-            <div class="bg-[#12132D] w-[95%] mx-auto lg:w-auto  mt-6 lg:mt-12 rounded-3xl lg:rounded-[40px]">
-                <div class="bg-[url('./images/bgbanner.png')]  bg-no-repeat bg-cover bg-bottom  flex flex-col lg:flex-row p-10 xl:p-28 lg:p-24 justify-between gap-4 lg:gap-12 rounded-3xl">
-                    <div class="text-white font-int lg:w-[70%] text-center mx-auto lg:text-left lg:mx-0 my-auto space-y-4 lg:space-y-10">
-                        
-                       <h1 class="text-4xl lg:text-7xl font-black font-mul ">Welcome to the<br> <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">Zenith-W</span> Forum</h1>
-                       <p class="lg:text-xl lg:w-[80%] font-mul">Embark on a journey where laughter echoes, melodies enchant, and code weaves the future!</p>
-                        
-                        <div class="relative  lg:w-[70%]">
-                            <div class="absolute  inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                                </svg>
-                            </div>
+        <div
+          class="bg-[#12132D] w-[95%] mx-auto lg:w-auto mt-6 lg:mt-12 rounded-3xl lg:rounded-[40px]"
+        >
+          <div
+            class="bg-[url('./images/bgbanner.png')] bg-no-repeat bg-cover bg-bottom flex flex-col lg:flex-row p-10 xl:p-28 lg:p-24 justify-between gap-4 lg:gap-12 rounded-3xl"
+          >
+            <div
+              class="text-white font-int lg:w-[70%] text-center mx-auto lg:text-left lg:mx-0 my-auto space-y-4 lg:space-y-10"
+            >
+              <h1 class="text-4xl lg:text-7xl font-black font-mul">
+                Welcome to the<br />
+                <span
+                  class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+                  >Zenith-W</span
+                >
+                Forum
+              </h1>
+              <p class="lg:text-xl lg:w-[80%] font-mul">
+                Embark on a journey where laughter echoes, melodies enchant, and
+                code weaves the future!
+              </p>
 
-                          <!-- Searching is here -->
-                            <input type="search" id="search" class="block w-full p-4  lg:text-lg text-sm ps-10 text-gray-500 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-800 focus:border-blue-500" placeholder="Search here anything" required />
-                            <button id="searchbtn" type="submit" class=" text-white absolute w-[28%]   end-2 lg:top-2  top-1.5 bg-[#797DFC] hover:bg-blue-800 hover:ring-2 focus:ring-blue-700 font-medium rounded-full text-md  lg:py-3 py-2 ">Search</button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white lg:w-[40%] md:w-[68%]  my-auto lg:text-2xl  text-xl font-mul p-4 lg:px-12 lg:py-10  rounded-3xl space-y-2 w-full lg:h-[310px]  mx-auto lg:mx-0">
-              
-                        <div class="flex justify-between gap-2 lg:gap-12 p-2">
-                          <p>Registered Users</p>
-                          <p>01</p>
-                        </div>
-
-                        <div class="flex justify-between gap-2 lg:gap-12 p-2  ">
-                          <p>Forum</p>
-                          <p>05</p>
-                        </div>
-
-                        <div class="flex justify-between  gap-2 lg:gap-12 p-2  ">
-                          <p>Topics</p>
-                          <p>01</p>
-                        </div>
-
-                        <div class="flex justify-between gap-2 lg:gap-12 p-2">
-                          <p>Replies</p>
-                          <p>01</p>
-                        </div>
-                    </div>
+              <div class="relative lg:w-[70%]">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
                 </div>
-            </div>
-      </section>
-   </header>
-   
 
-<main class="container mx-auto mt-3   xl:w-[80%] lg:mt-10 lg:mb-24 lg:space-y-6">
-  
- <!-- Let's Discuss Section -->
-  <section class="container mt-20 mb-20 mx-auto relative">
-    <div class=" w-[95%] mx-auto lg:w-auto  mt-6 lg:mt-12 rounded-3xl lg:rounded-[40px]">
-      <!-- Lets Discuss Text -->
+                <!-- Searching is here -->
+                <input
+                  type="search"
+                  id="search"
+                  class="block w-full p-4 lg:text-lg text-sm ps-10 text-gray-500 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-800 focus:border-blue-500"
+                  placeholder="Search by category"
+                  required
+                />
+                <button
+                  id="searchbtn"
+                  type="submit"
+                  onclick="searchPosts()"
+                  class="text-white absolute w-[28%] end-2 lg:top-2 top-1.5 bg-[#797DFC] hover:bg-blue-800 hover:ring-2 focus:ring-blue-700 font-medium rounded-full text-md lg:py-3 py-2"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white lg:w-[40%] md:w-[68%] my-auto lg:text-2xl text-xl font-mul p-4 lg:px-12 lg:py-10 rounded-3xl space-y-2 w-full lg:h-[310px] mx-auto lg:mx-0"
+            >
+              <div class="flex justify-between gap-2 lg:gap-12 p-2">
+                <p>Registered Users</p>
+                <p>01</p>
+              </div>
+
+              <div class="flex justify-between gap-2 lg:gap-12 p-2">
+                <p>Forum</p>
+                <p>05</p>
+              </div>
+
+              <div class="flex justify-between gap-2 lg:gap-12 p-2">
+                <p>Topics</p>
+                <p>01</p>
+              </div>
+
+              <div class="flex justify-between gap-2 lg:gap-12 p-2">
+                <p>Replies</p>
+                <p>01</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main
+      class="container mx-auto mt-3 xl:w-[80%] lg:mt-10 lg:mb-24 lg:space-y-6"
+    >
+      <!-- Let's Discuss Section -->
+      <section class="container mt-20 mb-20 mx-auto relative">
+        <div
+          class="w-[95%] mx-auto lg:w-auto mt-6 lg:mt-12 rounded-3xl lg:rounded-[40px]"
+        >
+          <!-- Lets Discuss Text -->
+          <div class="text-center">
+            <h1 class="text-4xl lg:text-5xl mb-4 font-mul font-extrabold">
+              Let's Discuss
+            </h1>
+            <p class="w-[80%] mb-4 text-gray-500 mx-auto font-int">
+              Dive into our diverse collection of articles spanning comedy,
+              coding, music, and more. Whether you're a tech enthusiast, a music
+              lover, or simply looking for a good laugh, our discussion section
+              offers something for everyone.
+            </p>
+          </div>
+
+          <!-- Loader -->
+          <div class="text-center">
+            <div
+              class="loading loading-bars lg:w-[100px] mt-3 lg:mt-8 hidden loading-lg bg-gradient-to-r from-green-400 to-purple-300"
+            ></div>
+          </div>
+
+          <div class="lg:flex space-y-4 gap-4">
+            <div
+              id="otherPostsContainer"
+              class="lg:w-[70%] space-y-4 rounded-2xl w-full"
+            >
+              <!-- posts are populated from script.js -->
+            </div>
+
+            <!-- Title part sidebar -->
+            <div class="lg:w-[30%] rounded-2xl w-full">
+              <div
+                class="glass bg-[#12132D0D] rounded-3xl lg:rounded-xl h-fit space-y-2 p-6"
+                id="cross"
+              >
+                <div class="flex justify-between">
+                  <p class="font-bold text-[#12132D]">Title</p>
+                  <p>
+                    <i class="fa-solid fa-check-double text-green-400"></i>
+                    Marked as read (<span id="count">0</span>)
+                  </p>
+                </div>
+                <!-- read posts are populated in script.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join Section -->
+      <section class="container mt-20 mx-auto relative">
+        <div
+          class="mb-20 bg-[#12132D] mx-auto lg:w-full w-[95%] rounded-3xl lg:rounded-[40px] lg:flex justify-between lg:p-12 p-8 lg:gap-10"
+        >
+          <div
+            class="lg:w-[60%] md:w-[60%] lg:text-left text-center lg:pt-10 lg:pl-16"
+          >
+            <h1
+              class="text-white font-mul font-extrabold lg:text-5xl text-4xl lg:mb-10 mb-4"
+            >
+              Join Our Forum
+            </h1>
+            <p
+              class="text-gray-300 w-[95%] font-mul lg:text-2xl text-xl lg:mb-10 mb-4"
+            >
+              Join us at Zenith-W Forum and be part of something extraordinary!
+              🌟 Let's build a community where ideas flourish, and connections
+              last a lifetime.
+            </p>
+            <button
+              class="btn rounded-full mb-6 text-white border-none bg-[#797DFC] hover:ring-2 hover:bg-blue-700 px-10 font-semibold"
+            >
+              Registered Now
+            </button>
+          </div>
+
+          <div class="lg:w-[40%]">
+            <img
+              class="object-fill mx-auto"
+              src="./images/joinforum.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- latest posts Section-->
+      <section class="lg:mt-24 mt-20 mb-12 container mx-auto w-[95%] lg:w-full">
+        <!-- Latest Title -->
         <div class="text-center">
-          <h1 class="text-4xl lg:text-5xl mb-4 font-mul font-extrabold ">Let's Discuss</h1>
-          <p class="w-[80%] mb-4 text-gray-500 mx-auto font-int">Dive into our diverse collection of articles spanning comedy, coding, music, and more. Whether you're a tech enthusiast, a music lover, or simply looking for a good laugh, our discussion section offers something for everyone.</p>
+          <h1 class="text-4xl lg:text-5xl mb-4 font-mul font-extrabold">
+            Latest Posts
+          </h1>
+          <p class="w-[80%] mb-4 text-gray-500 mx-auto font-int">
+            Check out our newest posts for a fresh dose of creativity, humor,
+            and tech insights. Dive in now!
+          </p>
         </div>
 
         <!-- Loader -->
-           <div class="text-center ">
-             <div class="loading loading-bars lg:w-[100px] mt-3 lg:mt-8 hidden loading-lg bg-gradient-to-r from-green-400 to-purple-300 "
-              id="loading">
-              </div>
-           </div>
-
-        <div class="lg:flex  space-y-4 gap-4">
-          <div class="lg:w-[70%]  space-y-4  rounded-2xl w-full">
-          <!-- card Starts -->
-             <div class="bg-[#F3F3F5] p-8 flex lg:flex-row flex-col gap-4 rounded-2xl">
-                <div>
-                  <div class="relative bg-white w-20 mx-auto rounded-lg">
-                    <img class=" mx-auto rounded-xl" src="./images/my-img.jpg" alt="">
-                    <span class="absolute top-1 -right-1 transform -translate-y-1/2 w-3.5 h-3.5 bg-green-600 border-2 border-white rounded-full"></span>
-                  </div>
-                </div>
-             
-               <div class="space-y-2 w-full lg:text-left text-center">
-                  <div class="flex gap-4 lg:justify-start justify-center font-mul">
-                     <p class="">#Coding</p>
-                     <p class="">Author: Muhammad Tanvir</p>
-                  </div>
-                   <h1 class="text-2xl font-bold">10 Kids Unaware of Their Halloween Costume</h1>
-                   <p class="text-gray-500  lg:w-full mx-auto w-[80%]">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
-                  
-                   <hr class="border-dashed bg-gray-400"> 
-                
-                  <div class="flex mx-auto lg:w-full w-[80%] justify-between">
-                     <div class="flex gap-6">
-                        <p>560</p>
-                        <p>1,560</p>
-                         <div>
-                          <p class="font-int flex gap-2"> <i class="fa-regular fa-eye flex items-center"></i>5 min</p>
-                         </div>
-                       
-                      </div>
-                   <div>
-                      <button onclick="" class="btn  btn-circle btn-outline text-white text-xl bg-gradient-to-r from-blue-800 to-green-400">
-                       <i class="fa-regular fa-envelope-open"></i>
-                       </button>
-                    </div>
-                  </div>
-
-                </div>
-             </div>
-        <!-- Cards Ends -->
-
+        <div class="text-center">
+          <div
+            class="loading loading-bars lg:w-[100px] mt-3 lg:mt-8 hidden loading-lg bg-gradient-to-r from-green-400 to-purple-300"
+          ></div>
         </div>
 
-       <!-- Title part sidebar -->
-        <div class="lg:w-[30%] rounded-2xl w-full">
-             <div class=" glass bg-[#12132D0D] rounded-t-3xl lg:rounded-xl h-fit space-y-2 p-6 " id="cross">
-                 <div class=" flex justify-between">
-                    <p class="font-bold text-[#12132D]">Title</p>
-                    <p><i class="fa-solid fa-check-double text-green-400"></i>  Marked as read (<span id="count">0</span>)</p>
-                 </div>
-                 <div class="flex gap-2 justify-between bg-white p-2 rounded-2xl">
-                    <p class="font-int text-black">10 kids Unaware of their Halloween costume</p>
-                    
-                     <div class="flex justify-center items-center">
-                      <p class="font-int flex gap-2"> <i class="fa-regular fa-eye flex items-center"></i>1568</p>
-                     </div>
-                 </div>
-             </div>
-         </div>
-
-
-        </div>
-     </div>
-      
-  </section>
-   
-    <!-- Join Section -->
-     <section class="container mt-20 mx-auto relative">
-        <div class="mb-20 bg-[#12132D] mx-auto lg:w-full w-[95%] rounded-3xl lg:rounded-[40px]  lg:flex justify-between lg:p-12 p-8  lg:gap-10">
-
-            <div class="lg:w-[60%] md:w-[60%] lg:text-left text-center  lg:pt-10 lg:pl-16">
-               <h1 class="text-white font-mul font-extrabold lg:text-5xl text-4xl lg:mb-10 mb-4">Join Our Forum</h1>
-               <p class="text-gray-300 w-[95%] font-mul lg:text-2xl text-xl lg:mb-10 mb-4">Join us at Zenith-W Forum and be part of something extraordinary! 🌟 Let's build a community where ideas flourish, and connections last a lifetime.</p>
-               <button class="btn rounded-full mb-6 text-white border-none bg-[#797DFC] hover:ring-2 hover:bg-blue-700   px-10 font-semibold">Registered Now</button>
-            </div>
-       
-           <div class="lg:w-[40%]">
-             <img class="object-fill mx-auto" src="./images/joinforum.png" alt="">
-           </div>
-
+        <div
+          id="latestPostContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 mt-4 lg:mt-12"
+        >
+          <!-- Code is coming from script.js -->
         </div>
       </section>
+    </main>
 
-
-      <!-- latest posts Section-->
-     <section class="lg:mt-24 mt-20 mb-12 container mx-auto w-[95%] lg:w-full">
-    
-        <!-- Latest Title -->
-         <div class="text-center">
-             <h1 class="text-4xl lg:text-5xl mb-4 font-mul font-extrabold">Latest Posts</h1>
-             <p class="w-[80%] mb-4 text-gray-500 mx-auto font-int">Check out our newest posts for a fresh dose of creativity, humor, and tech insights. Dive in now!</p>
+    <!-- Footer Section -->
+    <footer class="bg-[#F3F3F5] mt-10">
+      <div class="container mx-auto w-[80%] text-black text-center">
+        <div class="flex flex-col justify-center mb-6 lg:mb-12 pt-12 lg:pt-24">
+          <div class="w-[80%] mx-auto space-y-2 lg:space-y-4">
+            <h1
+              class="lg:text-4xl text-[#12132D] text-center text-2xl font-bold font-rale"
+            >
+              Zenith-<span class="text-[#797DFC]">W</span>
+            </h1>
+            <p class="lg:w-full text-black text-center font-int mx-auto">
+              Join us at Twitter, Facebook, Instagram and LinkedIn to explore
+              new experiences and connect with a community passionate about
+              discovery. Let's create unforgettable moments together!
+            </p>
           </div>
+          <div class="text-2xl lg:text-4xl flex justify-center mt-10 gap-4">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </div>
 
-         <div id="latestPostContainer" class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 mt-4 lg:mt-12">
-            <!-- Code is coming from script.js -->
-         </div>
+        <hr class="border" />
 
-      </section>
-
-   </main>
-
-
-
-
-
-
-<!-- Footer Section -->
-<footer class="bg-[#F3F3F5] mt-10">
-  <div class="container mx-auto   w-[80%] text-black text-center">
- 
-    <div class="flex flex-col justify-center mb-6 lg:mb-12 pt-12 lg:pt-24">
-      <div class="w-[80%] mx-auto space-y-2 lg:space-y-4">
-        <h1 class="lg:text-4xl text-[#12132D] text-center text-2xl font-bold font-rale">Zenith-<span class="text-[#797DFC]">W</span></h1>
-        <p class="lg:w-full text-black text-center font-int mx-auto">
-          Join us at Twitter, Facebook, Instagram and LinkedIn  to explore new experiences and connect with a community passionate about discovery.
-          Let's create unforgettable moments together!
-        </p>
+        <div class="flex pb-16 pt-6 lg:pt-12 lg:pb-10 gap-0 lg:gap-2 lg:w-full">
+          <div class="lg:w-[50%] font-int mx-auto text-black">
+            <p class="text-center">@2024,All rights reserved.</p>
+          </div>
+        </div>
       </div>
-      <div class="text-2xl lg:text-4xl flex justify-center mt-10 gap-4">
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin-in"></i>
-      </div>
-    </div>
- 
-  <hr class="border">
- 
-    <div class="flex pb-16 pt-6 lg:pt-12 lg:pb-10 gap-0 lg:gap-2 lg:w-full">
-      <div class="lg:w-[50%] font-int mx-auto text-black ">
-        <p class="text-center">@2024,All rights reserved.</p>
-      </div>
-    </div>
-  </div>
- 
- </footer>
- 
- 
- <!-- Javascript File Link -->
-   <script src="./script.js" alt=""></script>
-</body>
+    </footer>
+
+    <!-- Javascript File Link -->
+    <script src="./script.js" alt=""></script>
+  </body>
 </html>
